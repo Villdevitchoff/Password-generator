@@ -2,7 +2,7 @@
 //generate button to initiate password generator. List charactor variables.
 var generateBtn=document.getElementById("generate")
 var upperCase=["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var lowerCase=["a","b","c","d","e","f","g","h","i","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var lowerCase=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var number=["0","1","2","3","4","5","6","7","8","9"]
 var specialCharactors=["!","@","#","$","%","^","&","/","?",".","?","<",">","~","`",";",":","[","]","{","}","(",")","|"]
 var arrayofAcceptableValues=[]
@@ -24,14 +24,14 @@ var generatePassword=function(){
       useNumbers= window.prompt("Enter numbers yes or no","no")
       useSpecialCharactors= window.prompt("Enter special charactors yes or no","no")
        
-    
+    //5 criteria to create password.
      getcharactorQuantity()
      getuseUpperCase()
      getuseLowerCase()
      getuseNumbers()
      getusespecialcharactors()
   
-    
+    //conditional statements using variables and arrays.
      if(arrayofAcceptableValues.length>0){
          for(var i=0;i<length;i++){
     var pointToAcceptableValues= Math.floor( Math.random()*arrayofAcceptableValues.length)
